@@ -11,4 +11,4 @@ def home(request):
 
     res = requests.get(f"http://ip-api.com/json/{ip}")
 
-    return HttpResponse(f"{ip}\n {res.tex}")
+    return HttpResponse(f"{ip}\n {res.text}")
