@@ -1,4 +1,4 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import render
 import requests
 
 
@@ -9,6 +9,5 @@ def home(request):
     else:
         ip = request.META.get("REMOTE_ADDR")
 
-    res = requests.get(f"http://ip-api.com/json/{ip}")
-
-    return HttpResponse(f"{ip}\n {res.text}")
+    res = requests.get(f"http://ip-api.com/json/{ip}").json()
+    return render(request, "main.html", {"country": res.get("country")})
