@@ -16,6 +16,9 @@ def home(request):
 
 def pre_order(request):
     if request.method == "POST":
+
+        print(request.POST)
+
         product = request.POST.get("product")
         quantity = request.POST.get("quantity")
         fname = request.POST.get("fname")
