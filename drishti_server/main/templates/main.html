@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FV81V661W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1FV81V661W');
+  </script>
+
   {% load static %}
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml"
@@ -15,6 +25,7 @@
 <body>
   <div id="root"></div>
   <input type="hidden" value="{{ country }}" id="country_location">
+  {% csrf_token %}
 </body>
 
 </html>
