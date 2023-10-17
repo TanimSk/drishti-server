@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import home
+from main.views import home, pre_order
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/pre-order/", pre_order),
     path("", home, name="home"),
 ]
