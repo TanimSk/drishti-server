@@ -7,7 +7,10 @@ class PreOrderAdmin(admin.ModelAdmin):
     list_display = (
         "first_name",
         "last_name",
-        "phone_number",
         "product",
         "quantity",
+        "phone_number",
+        "email_address",
+        "address",
+        "comment",
     )
